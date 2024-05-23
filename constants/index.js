@@ -1,4 +1,4 @@
-export const RapidApiKey = "8bf077ad5fmsh60df19d136b8d26p1d66a0jsn95b09e238b3f"
+export const RapidApiKey = "925deb267bmsh7199fdf69e56c7dp1518cdjsndcf18e788584"
 
 export const sliderImages = [
     require("../assets/images/slide1.jpg"),

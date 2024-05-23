@@ -27,7 +27,7 @@ const ExerciseList = ({data}) => {
 
 const ExerciseCard = ({item, router, index}) => {
     return (
-        <Animated.View entering={FadeInDown.duration(400).delay(index*200).springify().damping(7)} key={item.id}>
+        <Animated.View entering={FadeInDown.duration(400).delay(index*200).springify()} key={item.id}>
             <TouchableOpacity onPress={()=>router.push({pathname: '/exerciseDetails', params: item})} className="flex py-3 space-y-2">
                 <View className="bg-neutral-200 shadow rounded-[25px]">
                     <Image source={{uri: item.gifUrl}} style={{width: wp(44), height: wp(52)}} contentFit='cover' className="rounded-[25px]" />

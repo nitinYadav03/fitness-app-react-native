@@ -9,7 +9,7 @@ const apiCall = async (url, params) => {
     url,
     params,
     headers: {
-      'X-RapidAPI-Key': '8bf077ad5fmsh60df19d136b8d26p1d66a0jsn95b09e238b3f',
+      'X-RapidAPI-Key': RapidApiKey,
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
     },
   };

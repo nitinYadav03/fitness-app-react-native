@@ -15,11 +15,12 @@ import { dummyExercises } from '../constants';
 const Exercises = () => {
   const router = useRouter();
   const item = useLocalSearchParams();
-  const [exercises, setExercises] = useState(dummyExercises);
+  const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
-    // if(item) getExercises(item.name)
-  }, [item]);
+    if(item) getExercises(item.name)
+      console.log("called")
+  }, []);
 
   const getExercises = async (bodyParts) => {
     let data = await fetchExercisesByBodyparts(bodyParts);

@@ -9,7 +9,7 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 
-const IOS = Platform.OS == 'ios'
+const android = Platform.OS == 'android'
 const ExerciseDetails = () => {
     const router = useRouter()
   const item = useLocalSearchParams();
@@ -24,9 +24,9 @@ const ExerciseDetails = () => {
         />
       </View>
 
-      {IOS && <TouchableOpacity onPress={()=>router.back()} className="absolute right-0 mt-2 mx-2">
+      <TouchableOpacity onPress={()=>router.back()} style={{marginTop: android ? hp(3) : ""}} className="absolute right-0 mt-2 mx-2">
         <MaterialCommunityIcons name="close-octagon" size={hp(4.5)} color="#f43f5e" />
-      </TouchableOpacity>}
+      </TouchableOpacity>
       
 
       <ScrollView className="mx-4 space-y-3 mt-3" showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom: 60}} >
